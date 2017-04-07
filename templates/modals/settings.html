@@ -23,6 +23,16 @@
       <p>Disable or enable showing HD videos of Highlight Intros and Emotes</p>
       <button class="btn btn-primary" type="button" ng-click="settings.toggleSetting('hdVideos')">{{settings.hdVideos ? 'Disable' : 'Enable'}}</button>
     </div>
+    <div class="setting">
+      <h3>Import/Export Data</h3>
+      <p>Copy and paste this string into your other browser or store it in a file for backup. You can also input your export and import it with the overwrite button.</p>
+      <div ng-show="settings.importErrors" class="alert alert-danger">
+        <strong>Error:</strong>
+        <pre>{{settings.importErrors}}</pre>
+      </div>
+      <textarea type="text" class="form-control" ng-model="settings.data" rows="5"></textarea>
+      <button class="btn btn-warning" type="button" ng-click="settings.importData(settings.data)">Overwrite data!</button>
+    </div>
   </div>
   <div class="modal-footer">
     <button class="btn btn-primary" type="button" ng-click="settings.close()">Close</button>

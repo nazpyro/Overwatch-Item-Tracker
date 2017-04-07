@@ -25,6 +25,21 @@ body {
   padding-top: 2px;
 }
 
+#settings .alert {
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+#settings textarea {
+  font-family: monospace;
+  font-size: 13px;
+  margin-bottom: 5px;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
 #settings .setting:not(:first-of-type) {
   border-top: 1px solid #e5e5e5;
   padding-top: 10px;
